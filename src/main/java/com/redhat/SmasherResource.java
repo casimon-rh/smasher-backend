@@ -14,7 +14,6 @@ import io.fabric8.kubernetes.client.KubernetesClient;
 @Path("/")
 public class SmasherResource {
 
-
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Pod> getPods() {
