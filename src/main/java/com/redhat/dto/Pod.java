@@ -1,4 +1,4 @@
-package com.redhat;
+package com.redhat.dto;
 
 public class Pod {
   public String name;
