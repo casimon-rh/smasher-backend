@@ -21,6 +21,10 @@ spec:
           secret:
             secretName: sa-token
             defaultMode: 420
+        - name: keys
+          configMap:
+            name: keys
+            defaultMode: 420
       containers:
         - terminationMessagePath: /dev/termination-log
           name: smasher-back
@@ -40,6 +44,8 @@ spec:
           volumeMounts:
             - name: sa-volume
               mountPath: /home/jboss/sa/
+            - name: keys
+              mounPath: /home/jboss/keys/
           terminationMessagePolicy: File
   strategy:
     type: RollingUpdate
