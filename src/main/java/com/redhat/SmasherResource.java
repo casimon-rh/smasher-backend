@@ -29,7 +29,7 @@ public class SmasherResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @RolesAllowed({"User", "Admin"})
+    // @RolesAllowed({"User", "Admin"})
     public List<Pod> getPods() {
         KubernetesClient k8s = null;
         List<Pod> pods = new ArrayList<>();
